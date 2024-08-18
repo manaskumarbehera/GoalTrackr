@@ -12,17 +12,8 @@ body {
     align-items: center;
 }
 
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-}
-
-h1 {
+h1, h2, h3 {
     color: #333;
-    font-size: 1.5em;
-    margin: 0;
 }
 
 label {
@@ -59,57 +50,85 @@ button:hover {
     margin-top: 10px;
     font-size: 1em;
     color: #555;
+    position: relative; /* Required for absolute positioning of buttons */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icons button {
+    border: none;
+    background: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    color: #007bff;
+}
+
+.icons button:hover {
+    color: #0056b3;
 }
 
 .hidden {
     display: none;
 }
 
-#toggle-btn {
-    font-size: 1.2em;
+#add-goal-btn {
+    font-size: 1.5em;
     width: 40px;
     height: 40px;
+    margin-bottom: 20px;
     background-color: #28a745;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     color: white;
-    margin-left: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
 }
 
-#toggle-btn::before {
-    content: "+";
-    font-size: 1.2em; /* Ensure the size is appropriate */
-}
-
-#toggle-btn.cancel::before {
-    content: "✕";
-    font-size: 1.2em; /* Ensure the size is appropriate */
-}
-
-
-.hidden {
-    display: none;
-}
-
-
-#toggle-btn.cancel {
+#add-goal-btn.cancel {
     background-color: #dc3545;
 }
 
-#toggle-btn.add::before {
-    content: "+";
+#add-goal-btn.cancel:hover {
+    background-color: #c82333;
 }
 
-#toggle-btn.cancel::before {
-    content: "✕";
+#add-goal-btn:hover {
+    background-color: #218838;
 }
 
 #export-btn, #import-btn {
     margin-top: 15px;
+}
+
+/* Show icons on hover */
+.goal-item:hover .icons {
+    display: flex;
+}
+
+#category-suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #ddd;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: #fff;
+}
+
+#category-suggestions li {
+    padding: 5px;
+    cursor: pointer;
+}
+
+#category-suggestions li:hover {
+    background-color: #f1f1f1;
 }
