@@ -8,17 +8,29 @@
 </head>
 <body>
     <div class="container">
-        <h1>Goal Countdown</h1>
-        <label for="goal">Goal Name:</label>
-        <input type="text" id="goal" placeholder="Enter your goal">
+        <h1>Goal Countdown Tracker</h1>
 
-        <label for="date">Target Date:</label>
-        <input type="date" id="date">
+        <button id="add-goal-btn" title="Add a new goal">+</button>
 
-        <button id="save">Save Goal</button>
+        <div id="goal-form" class="hidden">
+            <label for="category">Category:</label>
+            <input type="text" id="category" placeholder="Enter category">
 
-        <h2 id="display-goal"></h2>
-        <div id="countdown"></div>
+            <label for="goal">Goal Name:</label>
+            <input type="text" id="goal" placeholder="Enter your goal">
+
+            <label for="date">Target Date:</label>
+            <input type="date" id="date">
+
+            <button id="save">Save Goal</button>
+        </div>
+
+        <h2>Goals</h2>
+        <div id="goal-list"></div>
+
+        <button id="export-btn">Export as JSON</button>
+        <input type="file" id="import-file" accept=".json">
+        <button id="import-btn">Import JSON</button>
     </div>
 
     <script src="popup.js"></script>

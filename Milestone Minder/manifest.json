@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "MileStone Tracker",
-    "version": "1.0",
+    "version": "0.1",
     "description": "Track your goals and milestones with a countdown timer.",
     "action": {
       "default_popup": "popup.html",
