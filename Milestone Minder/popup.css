@@ -12,8 +12,17 @@ body {
     align-items: center;
 }
 
-h1, h2, h3 {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+h1 {
     color: #333;
+    font-size: 1.5em;
+    margin: 0;
 }
 
 label {
@@ -42,12 +51,6 @@ button:hover {
     background-color: #0056b3;
 }
 
-#countdown {
-    margin-top: 20px;
-    font-size: 1.2em;
-    color: #ff0000;
-}
-
 #goal-form {
     width: 100%;
 }
@@ -62,20 +65,49 @@ button:hover {
     display: none;
 }
 
-#add-goal-btn {
-    font-size: 1.5em;
+#toggle-btn {
+    font-size: 1.2em;
     width: 40px;
     height: 40px;
-    margin-bottom: 20px;
     background-color: #28a745;
     border-radius: 50%;
     border: none;
     cursor: pointer;
     color: white;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
 }
 
-#add-goal-btn:hover {
-    background-color: #218838;
+#toggle-btn::before {
+    content: "+";
+    font-size: 1.2em; /* Ensure the size is appropriate */
+}
+
+#toggle-btn.cancel::before {
+    content: "✕";
+    font-size: 1.2em; /* Ensure the size is appropriate */
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+#toggle-btn.cancel {
+    background-color: #dc3545;
+}
+
+#toggle-btn.add::before {
+    content: "+";
+}
+
+#toggle-btn.cancel::before {
+    content: "✕";
 }
 
 #export-btn, #import-btn {

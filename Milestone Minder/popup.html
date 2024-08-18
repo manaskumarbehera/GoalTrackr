@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Goal Countdown Tracker</title>
+    <title>Goals</title>
     <link rel="stylesheet" href="popup.css">
 </head>
 <body>
     <div class="container">
-        <h1>Goal Countdown Tracker</h1>
-
-        <button id="add-goal-btn" title="Add a new goal">+</button>
+        <div class="header">
+            <h1>Goals</h1>
+            <button id="toggle-btn" title="Add a new goal"></button>
+        </div>
 
         <div id="goal-form" class="hidden">
             <label for="category">Category:</label>
@@ -25,7 +26,7 @@
             <button id="save">Save Goal</button>
         </div>
 
-        <h2>Goals</h2>
+        <h2>Your Goals</h2>
         <div id="goal-list"></div>
 
         <button id="export-btn">Export as JSON</button>
