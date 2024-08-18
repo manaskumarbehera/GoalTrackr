@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "MileStone Tracker",
+    "version": "1.0",
+    "description": "Track your goals and milestones with a countdown timer.",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon128.png",
+        "128": "icons/icon128.png"
+      }
+    },
+    "permissions": [
+      "storage"
+    ],
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon128.png",
+      "128": "icons/icon128.png"
+    }
+  }
+  
